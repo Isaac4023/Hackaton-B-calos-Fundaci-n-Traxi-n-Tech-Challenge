@@ -64,6 +64,13 @@
                     <label for="destino">Punto de destino</label>
                     <input type="text" id="destino" name="destino" placeholder="Dirección o coordenadas">
                 </details>
+                <label for="prioridad">Prioridad del viaje</label>
+                <select id="prioridad" name="prioridad">
+                    <option value="tiempo">Menor tiempo</option>
+                    <option value="seguridad">Mayor seguridad</option>
+                    <option value="combustible">Combistible</option>
+                </select>
+                <button type="submit">Consultar ruta con IA</button>
             </form>
         </section>
         <section id="respuesta-ia">
