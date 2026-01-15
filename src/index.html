@@ -82,9 +82,9 @@
                 <label for="origen">Punto de origen</label>
                 <input type="text" id="origen" name="origen" placeholder="Dirección o coordenadas">
                 <label for="destino">Punto de destino</label>
-                <input type="text" id="destino" name="destino" placeholder="Dirección o coordenadas">
+                <input type="text" id="destino" name="destino" placeholder="Dirección o coordenadas" required>
                 <label for="hora-llegada">Fecha de llegada</label>
-                <input type="datetime-local" id="datetime-llegada" name="datetime-llegada">
+                <input type="datetime-local" id="datetime-llegada" name="datetime-llegada" required>
                 <details>
                     <summary>Añadir mas puntos de entrega</summary>
                     <label for="destino">Punto de destino</label>
@@ -118,9 +118,9 @@
                 <h2>Condiciones del viaje</h2>
                 <div id="datos-condiciones">
                     <label for="hora-salida">Hora de salida</label>
-                    <input type="datetime-local" id="datetime-salida" name="datetime-salida">
+                    <input type="datetime-local" id="datetime-salida" name="datetime-salida" required>
                     <label>
-                        <input type="checkbox" id="manejo-nocturno" name="manejo-nocturno">
+                        <input type="checkbox" id="manejo-nocturno" name="manejo-nocturno" required>
                         Permitir manejo nocturno
                     </label>
                 </div>
