@@ -17,9 +17,10 @@
             </ul>
         </nav>
     </header>
-    <h1>Asignación inteligente de rutas</h1>
+    <h1>Asignación inteligente de ruta</h1>
     <main>
         <section id="formulario">
+<<<<<<< HEAD
             <form>
             <h2>Datos del camionero</h2>
             <div id="datos-camionero">
@@ -37,10 +38,31 @@
                 <input type="number" id="horas-conducidas" name="horas-conducidas" min="0" max="24">
                 <label for="fatiga">Nivel de fatiga</label>
                 <select id="fatiga" name="fatiga">
+=======
+            <form id="formulario_ruta" >
+                <label for="operador">Nombre del operador</label>
+                <input type="text" id="operador" name="operador" required>
+                <label for="experiencia">Años de experiencia</label>
+                <input type="number" id="experiencia" name="experiencia" min="0">
+                <label for="licencia">Tipo de licencia</label>
+                <select id="licencia" name="licencia">
+                    <option value="">Selecciona una opción</option>
+                    <option value="A">Tipo A</option>
+                    <option value="B">Tipo B</option>
+                    <option value="C">Tipo C</option>
+                    <option value="E">Tipo E</option>
+                </select>
+                <label for="horas_conducidas">Horas conducidas hoy</label>
+                <input type="number" id="horas_conducidas" name="horas_conducidas" min="0">
+                <label for="fatiga">Nivel de fatiga</label>
+                <select id="fatiga" name="fatiga">
+                    <option value="">Selecciona una opción</option>
+>>>>>>> ad132387d2b22594917fd5757f6b6a352a8bb6cd
                     <option value="baja">Baja</option>
                     <option value="media">Media</option>
                     <option value="alta">Alta</option>
                 </select>
+<<<<<<< HEAD
                 <label for="preferencia-manejo">Preferencia de manejo</label>
                 <select id="preferencia-manejo" name="preferencia-manejo">
                     <option value="autopistas">Autopistas</option>
@@ -55,22 +77,36 @@
             <div id="formula-ruta">
                 <h2>Datos del transporte</h2>
                 <label for="vehiculo">Tipo de vehiculo</label>
+=======
+                <label for="preferencia_manejo">Preferencia de manejo</label>
+                <select id="preferencia_manejo" name="preferencia_manejo">
+                    <option value="">Selecciona una opción</option>
+                    <option value="rapido">Rápido</option>
+                    <option value="equilibrado">Equilibrado</option>
+                    <option value="seguro">Seguro</option>
+                </select>
+                <label>
+                    <input type="checkbox" name="carga_peligrosa">
+                    Transporta carga peligrosa
+                </label>
+                <label for="vehiculo">Tipo de vehículo</label>
+>>>>>>> ad132387d2b22594917fd5757f6b6a352a8bb6cd
                 <select name="vehiculo" id="vehiculo">
                     <option value="">Selecciona una opción</option>
-                    <option value="ligero">Camión ligero</option>
-                    <option value="torton">Torton</option>
+                    <option value="ligero">Camión ligero / última milla</option>
+                    <option value="torton">Torton (3_4 ejes)</option>
                     <option value="trailer">Tráiler</option>
-                    <option value="full">Full</option>
+                    <option value="full">Full (doble remolque)</option>
+                    <option value="refrigerado">Camión refrigerado</option>
+                    <option value="cisterna">Camión cisterna / químicos</option>
+                    <option value="mudanza">Camión de mudanza</option>
+                    <option value="van">Van / transporte urbano</option>
+                    <option value="bus">Autobús corporativo / escolar</option>
                 </select>
-                <label for="ejes">Numero de ejes</label>
-                <select name="ejes" id="ejes">
-                    <option value="">Selecciona una opción</option>
-                    <option value="2">2 ejes</option>
-                    <option value="3">3 ejes</option>
-                    <option value="4">4 ejes</option>
-                    <option value="5">5 ejes</option>
-                </select>
+                <label for="ejes">Número de ejes</label>
+                <input type="number" id="ejes" name="ejes" min="1">
                 <label for="carga">Tipo de carga</label>
+<<<<<<< HEAD
                 <select id="carga" name="carga">
                     <option value="">Selecciona una opción</option>
                     <option value="ligera">Ligera</option>
@@ -109,11 +145,37 @@
                     <input type="number" name="tiempo_descarga[]" min="0" required>
                 </details>
                 <label for="prioridad">Prioridad del viaje</label>
+=======
+                <input type="text" id="carga" name="carga">
+                <label for="peso">Peso estimado (kg)</label>
+                <input type="number" id="peso" name="peso" min="0">
+                <label for="origen">Origen</label>
+                <input type="text" id="origen" name="origen">
+                <label for="datetime_salida">Fecha y hora de salida</label>
+                <input type="datetime-local" id="datetime_salida" name="datetime_salida">
+                <h3>Destinos</h3>
+                <div id="destinos_container">
+                    <div class="destino_item">
+                        <label>Destino</label>
+                        <input type="text" name="destino[]" placeholder="Dirección o ciudad" required>
+                        <label>Tiempo de descarga (min)</label>
+                        <input type="number" name="tiempo_descarga[]" min="0" required>
+                    </div>
+                </div>
+                <button type="button" id="agregar_destino">➕ Agregar destino</button>
+                <label>
+                    <input type="checkbox" name="manejo_nocturno">
+                    Manejo nocturno
+                </label>
+                <label for="prioridad">Prioridad de la ruta</label>
+>>>>>>> ad132387d2b22594917fd5757f6b6a352a8bb6cd
                 <select id="prioridad" name="prioridad">
-                    <option value="tiempo">Menor tiempo</option>
-                    <option value="seguridad">Mayor seguridad</option>
-                    <option value="combustible">Combustible</option>
+                    <option value="">Selecciona una opción</option>
+                    <option value="normal">Normal</option>
+                    <option value="alta">Alta</option>
+                    <option value="urgente">Urgente</option>
                 </select>
+<<<<<<< HEAD
             </div>
                 <h2>Condiciones del viaje</h2>
                 <div id="datos-condiciones">
@@ -125,6 +187,9 @@
                     </label>
                 </div>
                 <button type="submit">Consultar TraxIA</button>
+=======
+                <button type="submit">Enviar a TraxIA</button>
+>>>>>>> ad132387d2b22594917fd5757f6b6a352a8bb6cd
             </form>
         </section>
         <section id="respuesta-ia">
@@ -134,12 +199,13 @@
                         Hola, soy tu asistente virtual TraxIA, Ingresa los datos del formulario y preguntame cualquier duda.
                     </div>
                 </div>
-                <form>
+                <form id="chat_form">
                     <input type="text" id="chat-input" placeholder="Pregunta cual destino es mas rapido o sobre tu carga..." required maxlength="500">
                     <button type="submit"></button>
                 </form>
             </div>
         </section>
     </main>
+    <script src="javascript.js"></script>
 </body>
 </html>
