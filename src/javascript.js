@@ -31,7 +31,7 @@ form.addEventListener('submit', async (e) => {
 
     try {
         const response = await fetch(
-            'https://isaac4023.app.n8n.cloud/webhook-test/ruta-traxion',
+            'https://isaac4023.app.n8n.cloud/webhook/ruta-traxion',
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
