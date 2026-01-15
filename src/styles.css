@@ -57,7 +57,7 @@ button {
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
 
 button:hover {
