@@ -106,14 +106,13 @@
                 <h2>Condiciones del viaje</h2>
                 <div id="datos-condiciones">
                     <label for="hora-salida">Hora de salida</label>
-                    <input type="time" id="hora-salida" name="hora-salida">
-                    <label for="hora-limite">Hora límite de entrega</label>
-                    <input type="time" id="hora-limite" name="hora-limite">
+                    <input type="datetime-local" id="datetime-salida" name="datetime-salida">
                     <label>
                         <input type="checkbox" id="manejo-nocturno" name="manejo-nocturno">
                         Permitir manejo nocturno
                     </label>
                 </div>
+                <button type="submit">Consultar TraxIA</button>
             </form>
         </section>
         <section id="respuesta-ia">
