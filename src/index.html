@@ -17,10 +17,42 @@
             </ul>
         </nav>
     </header>
-    <h1>Asignación inteligente de rutas</h1>
+    <h1>Asignación inteligente de ruta</h1>
     <main>
         <section id="formulario">
-            <form id="formula-ruta">
+            <form>
+            <h2>Datos del camionero</h2>
+            <div id="datos-camionero">
+                <label for="operador">Nombre / ID del operador</label>
+                <input type="text" id="operador" name="operador">
+                <label for="experiencia">Años de experiencia</label>
+                <input type="number" id="experiencia" name="experiencia">
+                <label for="licencia">Tipo de licencia</label>
+                <select id="licencia" name="licencia">
+                    <option value="">Selecciona una opción</option>
+                    <option value="federal">Federal</option>
+                    <option value="estatal">Estatal</option>
+                </select>
+                <label for="horas-conducidas">Horas conducidas hoy</label>
+                <input type="number" id="horas-conducidas" name="horas-conducidas" min="0" max="24">
+                <label for="fatiga">Nivel de fatiga</label>
+                <select id="fatiga" name="fatiga">
+                    <option value="baja">Baja</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                </select>
+                <label for="preferencia-manejo">Preferencia de manejo</label>
+                <select id="preferencia-manejo" name="preferencia-manejo">
+                    <option value="autopistas">Autopistas</option>
+                    <option value="libres">Carreteras libres</option>
+                    <option value="mixto">Mixto</option>
+                </select>
+                <label>
+                    <input type="checkbox" id="exp-peligrosa" name="exp-peligrosa">
+                    Experiencia con carga peligrosa
+                </label>
+            </div>
+            <div id="formula-ruta">
                 <h2>Datos del transporte</h2>
                 <label for="vehiculo">Tipo de vehiculo</label>
                 <select name="vehiculo" id="vehiculo">
@@ -50,19 +82,31 @@
                 <label for="origen">Punto de origen</label>
                 <input type="text" id="origen" name="origen" placeholder="Dirección o coordenadas">
                 <label for="destino">Punto de destino</label>
-                <input type="text" id="destino" name="destino" placeholder="Dirección o coordenadas">
+                <input type="text" name="destino[]" placeholder="Dirección o coordenadas" required>
+                <label for="tiempo-descarga">Tiempo de descarga (minutos)</label>
+                <input type="number" name="tiempo_descarga[]" min="0" required>
                 <details>
                     <summary>Añadir mas puntos de entrega</summary>
                     <label for="destino">Punto de destino</label>
-                    <input type="text" id="destino" name="destino" placeholder="Dirección o coordenadas">
+                    <input type="text" name="destino[]" placeholder="Dirección o coordenadas" required>
+                    <label for="tiempo-descarga">Tiempo de descarga (minutos)</label>
+                    <input type="number" name="tiempo_descarga[]" min="0" required>
                     <label for="destino">Punto de destino</label>
-                    <input type="text" id="destino" name="destino" placeholder="Dirección o coordenadas">
+                    <input type="text" name="destino[]" placeholder="Dirección o coordenadas" required>
+                    <label for="tiempo-descarga">Tiempo de descarga (minutos)</label>
+                    <input type="number" name="tiempo_descarga[]" min="0" required>
                     <label for="destino">Punto de destino</label>
-                    <input type="text" id="destino" name="destino" placeholder="Dirección o coordenadas">
+                    <input type="text" name="destino[]" placeholder="Dirección o coordenadas" required>
+                    <label for="tiempo-descarga">Tiempo de descarga (minutos)</label>
+                    <input type="number" name="tiempo_descarga[]" min="0" required>
                     <label for="destino">Punto de destino</label>
-                    <input type="text" id="destino" name="destino" placeholder="Dirección o coordenadas">
+                    <input type="text" name="destino[]" placeholder="Dirección o coordenadas" required>
+                    <label for="tiempo-descarga">Tiempo de descarga (minutos)</label>
+                    <input type="number" name="tiempo_descarga[]" min="0" required>
                     <label for="destino">Punto de destino</label>
-                    <input type="text" id="destino" name="destino" placeholder="Dirección o coordenadas">
+                    <input type="text" name="destino[]" placeholder="Dirección o coordenadas" required>
+                    <label for="tiempo-descarga">Tiempo de descarga (minutos)</label>
+                    <input type="number" name="tiempo_descarga[]" min="0" required>
                 </details>
                 <label for="prioridad">Prioridad del viaje</label>
                 <select id="prioridad" name="prioridad">
@@ -70,7 +114,17 @@
                     <option value="seguridad">Mayor seguridad</option>
                     <option value="combustible">Combustible</option>
                 </select>
-                <button type="submit">Consultar ruta con IA</button>
+            </div>
+                <h2>Condiciones del viaje</h2>
+                <div id="datos-condiciones">
+                    <label for="hora-salida">Hora de salida</label>
+                    <input type="datetime-local" id="datetime-salida" name="datetime-salida" required>
+                    <label>
+                        <input type="checkbox" id="manejo-nocturno" name="manejo-nocturno">
+                        Permitir manejo nocturno
+                    </label>
+                </div>
+                <button type="submit">Consultar TraxIA</button>
             </form>
         </section>
         <section id="respuesta-ia">
