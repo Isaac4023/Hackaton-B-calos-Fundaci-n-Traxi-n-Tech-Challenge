@@ -77,3 +77,21 @@ function agregarMensaje(texto, tipo) {
     chatMensajes.appendChild(div);
     chatMensajes.scrollTop = chatMensajes.scrollHeight;
 }
+
+const btnAgregar = document.getElementById('agregar_destino');
+const destinosContainer = document.getElementById('destinos_container');
+
+btnAgregar.addEventListener('click', () => {
+    const div = document.createElement('div');
+    div.classList.add('destino_item');
+
+    div.innerHTML = `
+        <label>Destino</label>
+        <input type="text" name="destino[]" placeholder="Dirección o ciudad" required>
+
+        <label>Tiempo de descarga (min)</label>
+        <input type="number" name="tiempo_descarga[]" min="0" required>
+    `;
+
+    destinosContainer.appendChild(div);
+});

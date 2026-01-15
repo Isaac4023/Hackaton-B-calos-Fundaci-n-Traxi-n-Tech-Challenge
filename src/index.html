@@ -20,7 +20,7 @@
     <h1>Asignación inteligente de ruta</h1>
     <main>
         <section id="formulario">
-            <form id="formulario_ruta">
+            <form id="formulario_ruta" >
                 <label for="operador">Nombre del operador</label>
                 <input type="text" id="operador" name="operador" required>
                 <label for="experiencia">Años de experiencia</label>
@@ -76,6 +76,16 @@
                 <input type="text" id="origen" name="origen">
                 <label for="datetime_salida">Fecha y hora de salida</label>
                 <input type="datetime-local" id="datetime_salida" name="datetime_salida">
+                <h3>Destinos</h3>
+                <div id="destinos_container">
+                    <div class="destino_item">
+                        <label>Destino</label>
+                        <input type="text" name="destino[]" placeholder="Dirección o ciudad" required>
+                        <label>Tiempo de descarga (min)</label>
+                        <input type="number" name="tiempo_descarga[]" min="0" required>
+                    </div>
+                </div>
+                <button type="button" id="agregar_destino">➕ Agregar destino</button>
                 <label>
                     <input type="checkbox" name="manejo_nocturno">
                     Manejo nocturno
