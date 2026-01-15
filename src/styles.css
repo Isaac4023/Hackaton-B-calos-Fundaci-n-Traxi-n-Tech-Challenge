@@ -192,6 +192,20 @@ button[type="submit"]:hover {
 #respuesta-ia button:hover {
   background: #14337a;
 }
+#chat_form button{
+  width: 52px;
+  height: 52px;
+  background: #1e3a8a;
+  color: white;
+  font-size: 20px;
+  border: none;
+  margin: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
 
 @media (max-width: 900px) {
   main {
