@@ -1,146 +1,200 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Fondo de la página */
 body {
   background: #f4f7fb;
   color: #333;
-  padding: 20px;
 }
 
-/* Contenedor principal */
-.container {
+header {
+  background: #1e3a8a;
+  padding: 12px 20px;
+}
+
+nav ul {
+  list-style: none;
   display: flex;
-  gap: 30px;
-  justify-content: space-between;
-  align-items: flex-start;
+  gap: 20px;
+}
+
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #1e3a8a;
+}
+
+main {
   max-width: 1200px;
   margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
 }
 
-/* Formulario lateral */
-.form-section {
-  flex: 1;
-  background: #fff;
-  padding: 20px;
+#formulario {
+  background: #ffffff;
+  padding: 25px;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-/* Encabezados */
-h1, h2 {
-  margin-bottom: 15px;
+label {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+h3 {
+  margin-top: 20px;
   color: #1e3a8a;
 }
 
-/* Campos del formulario */
-input, select, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
+#destinos_container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
 }
 
-/* Botón principal */
-button {
-  background: #1e3a8a;
-  color: #fff;
-  padding: 12px 18px;
+.destino_item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #2563eb;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.destino_item:hover {
+  background: #f1f5f9;
+}
+
+#agregar_destino {
+  margin-top: 15px;
+  padding: 10px;
+  background: #0ea5e9;
+  color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  transition: 0.3s ease;
 }
 
-button:hover {
+#agregar_destino:hover {
+  background: #0284c7;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
   background: #14337a;
 }
 
-/* Chat lateral */
-.chat-section {
-  flex: 1.2;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
+#respuesta-ia {
+  background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
 }
 
-/* Header del chat */
-.chat-header {
-  padding: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  background: #1e3a8a;
-  color: white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+#chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-/* Contenedor de mensajes */
-.messages {
+#chat-mensajes {
   flex: 1;
   padding: 15px;
   overflow-y: auto;
   background: #eef2f7;
 }
 
-/* Estilos para burbujas */
-.message {
-  max-width: 70%;
-  margin-bottom: 10px;
+.mensaje-ia {
+  background: #e0f2fe;
   padding: 12px 16px;
   border-radius: 15px;
-  line-height: 1.4;
+  margin-bottom: 10px;
+  max-width: 75%;
+}
+
+.mensaje-usuario {
+  background: #4f46e5;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  max-width: 75%;
+  text-align: right;
+}
+
+#respuesta-ia form {
+  display: flex;
+  border-top: 1px solid #cbd5e1;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 12px;
+  border: none;
   font-size: 14px;
 }
 
-/* Mensajes del usuario */
-.message.user {
-  background: #4f46e5;
-  color: white;
-  align-self: flex-end;
+#respuesta-ia button {
+  width: 55px;
+  border: none;
+  background: #1e3a8a;
+  cursor: pointer;
 }
 
-/* Mensajes del asistente */
-.message.assistant {
-  background: #fff;
-  border: 1px solid #ccc;
-  align-self: flex-start;
+#respuesta-ia button:hover {
+  background: #14337a;
 }
 
-/* Input abajo */
-.chat-footer {
-  padding: 10px;
-  display: flex;
-  gap: 8px;
-}
-
-/* Input del chat */
-.chat-footer input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* Input del chat: botón */
-.chat-footer button {
-  padding: 10px 15px;
-}
-
-/* Responsive (adaptable) */
 @media (max-width: 900px) {
-  .container {
-    flex-direction: column;
+  main {
+    grid-template-columns: 1fr;
   }
 }
