@@ -130,7 +130,7 @@ button:hover {
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
 /* Input del chat: botón */
