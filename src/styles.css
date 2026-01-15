@@ -1,0 +1,146 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fondo de la página */
+body {
+  background: #f4f7fb;
+  color: #333;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Formulario lateral */
+.form-section {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Encabezados */
+h1, h2 {
+  margin-bottom: 15px;
+  color: #1e3a8a;
+}
+
+/* Campos del formulario */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Botón principal */
+button {
+  background: #1e3a8a;
+  color: #fff;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #14337a;
+}
+
+/* Chat lateral */
+.chat-section {
+  flex: 1.2;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Header del chat */
+.chat-header {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #1e3a8a;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Contenedor de mensajes */
+.messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #eef2f7;
+}
+
+/* Estilos para burbujas */
+.message {
+  max-width: 70%;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  border-radius: 15px;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+/* Mensajes del usuario */
+.message.user {
+  background: #4f46e5;
+  color: white;
+  align-self: flex-end;
+}
+
+/* Mensajes del asistente */
+.message.assistant {
+  background: #fff;
+  border: 1px solid #ccc;
+  align-self: flex-start;
+}
+
+/* Input abajo */
+.chat-footer {
+  padding: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Input del chat */
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Input del chat: botón */
+.chat-footer button {
+  padding: 10px 15px;
+}
+
+/* Responsive (adaptable) */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+}
